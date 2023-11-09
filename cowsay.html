@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #txtCowsay{
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+   <span id="txtCowsay"> Hello, bovine world!  </span>
+   <pre>
+-------------------------------------------
+           \   ^__^
+            \  (oo)\_______
+               (__)\       )\/\
+                   ||----w |
+                   ||     ||
+   </pre>
+</body>
+<script>
+    //emnsagens que a vaca irá falar
+    const mensagens = [
+        'O que dá muitas voltas e não sai do lugar? O relógio.',
+        'O que boi consegue atravessar, mas o mosquito fica preso? A teia de aranha',
+        ' O que pode passar no sol sem fazer sombra? O vento',
+        'Qual é o animal mais antigo do mundo? A zebra pois é preto e branco.',
+        
+    ]
+
+    //pesquisa o elemento que tem id = txtCowsay
+    //que é o elemento que contem o texto que a vaca fala.
+    const txtCowsay= document.querySelector("#txtCowsay");
+
+    //gera um numero aleatorio de 0 -> comprimento do array mensagens
+    const idxMsg = Number.parseInt(Math.random()*mensagens.length);
+
+//usamos este indice para acessar o array mensagens.
+    txtCowsay.innerText = mensagens[idxMsg]
+</script>
+</html>
